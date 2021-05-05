@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/javascript"> // This tell the browser that the code inserted must be executed as JavaScript //
+            function checkdata()
+            {
+                var username = document.getElementById("name");
+                var emailid = document.getElementById("email");
+                var zipcodeid = document.getElementById("zipcode");
+
+            //Check if uersname field is empty
+            if(username.value==""){
+                alert("Please enter the name");
+                username.focus();
+                return false;
+                
+            }
+            // Check if email field is empty
+            if(emailid.value==""){
+                alert("Please enter the email");
+                emailid.focus();
+                return false;
+            }
+
+            }
+            // Check if zipcode field is empty
+            if(zipcodeid.value==""){
+                alert("Please enter the zipcode");
+                zipcodeid.focus();
+                return false;
+            }
+
+            //I all is well return True.
+            return true;
+        
+        </script>
+        <title>Contact Details</title>
+    </head>
+    <body>
+        <h2>
+            Enter Your Contact Details:
+        </h2> <br>
+        <form id="Form1" onsubmit="return checkdata()">
+        
+            <label for="name"> Name :</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <label for="email"> Email ID :</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <br>
+            <label for="zipcode"> ZIP CODE: </label>
+            <input type="text" id="zipcode" name="zipcode">
+            <br>
+            <br>
+            <input type="submit" value="submit"> <!--To create Button-->
+            <input type="reset" value="reset">   <!--To create Button-->
+
+        </form>
+
+
+    </body>
+</html>
